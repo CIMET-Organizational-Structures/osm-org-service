@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class OsmOrganizationServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OsmOrganizationServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(OsmOrganizationServiceApplication.class, args);
+    }
 
 }
