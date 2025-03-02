@@ -19,3 +19,37 @@ VALUES ('Collaborator', 'Alice'),
        ('Bot', 'Bot3'),
        ('Collaborator', 'Trent'),
        ('Contributor', 'Victor');
+
+INSERT INTO repo (name)
+VALUES ('Repo1'),
+       ('Repo2'),
+       ('Repo3'),
+       ('Repo4'),
+       ('Repo5'),
+       ('Repo6'),
+       ('Repo7'),
+       ('Repo8'),
+       ('Repo9'),
+       ('Repo10');
+
+INSERT INTO repo_contributor (repo_id, contributor_id)
+VALUES (1, 1),
+       (1, 2),
+       (2, 3),
+       (2, 4),
+       (2, 5),
+       (3, 6),
+       (4, 7),
+       (4, 8),
+       (4, 9),
+       (5, 10),
+       (6, 11),
+       (7, 12),
+       (8, 13),
+       (8, 14),
+       (9, 15),
+       (9, 16),
+       (9, 17),
+       (10, 18),
+       (10, 19),
+       (10, 20);
