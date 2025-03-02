@@ -9,7 +9,8 @@ services:
       POSTGRES_DB: org_db
     volumes:
       - org-service-db-data:/var/lib/postgresql/data
-      - ./.db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./.db/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./.db/data.sql:/docker-entrypoint-initdb.d/2-data.sql
     networks:
       - org-service-network
 
@@ -21,12 +22,27 @@ services:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.edu
       - PGADMIN_DEFAULT_PASSWORD=admin
     depends_on:
-      - org-service-db
+      org-service-db:
+        condition: service_started
     volumes:
       - pgadmin-data:/var/lib/pgadmin
       - ./.db/servers.json:/pgadmin4/servers.json
     networks:
       - org-service-network
+
+  org-service:
+    image: osm/organization-service:0.0.1-SNAPSHOT
+    environment:
+      PROFILE: dev
+      DATABASE_PORT: 5432
+    ports:
+      - 8080:8080
+    depends_on:
+      org-service-db:
+        condition: service_started
+    networks:
+      - org-service-network
+
 
 volumes:
   org-service-db-data:
