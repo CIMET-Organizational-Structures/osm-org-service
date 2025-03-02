@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "osm-org-service": {
+      "Name": "org-service-db",
+      "Group": "Servers",
+      "Host": "org-service-db",
+      "Port": 5432,
+      "MaintenanceDB": "postgres",
+      "Username": "admin",
+      "Password": "admin",
+      "SSLMode": "prefer"
+    }
+  }
+}
