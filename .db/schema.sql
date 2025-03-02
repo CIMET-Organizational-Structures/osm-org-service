@@ -1,7 +1,6 @@
--- create a table
-CREATE TABLE test
+CREATE TABLE contributor
 (
-    id       INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    name     TEXT    NOT NULL,
-    archived BOOLEAN NOT NULL DEFAULT FALSE
+    id   BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    type VARCHAR(255),
+    name VARCHAR(255)
 );

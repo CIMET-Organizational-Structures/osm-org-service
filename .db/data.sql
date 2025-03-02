@@ -1,4 +1,21 @@
--- add test data
-INSERT INTO test (name, archived)
-VALUES ('test row 1', true),
-       ('test row 2', false);
+INSERT INTO contributor (type, name)
+VALUES ('Collaborator', 'Alice'),
+       ('Contributor', 'Bob'),
+       ('Owner', 'Charlie'),
+       ('Member', 'David'),
+       ('Outside Collaborator', 'Eve'),
+       ('Bot', 'Bot1'),
+       ('Collaborator', 'Frank'),
+       ('Contributor', 'Grace'),
+       ('Owner', 'Heidi'),
+       ('Member', 'Ivan'),
+       ('Outside Collaborator', 'Judy'),
+       ('Bot', 'Bot2'),
+       ('Collaborator', 'Mallory'),
+       ('Contributor', 'Niaj'),
+       ('Owner', 'Olivia'),
+       ('Member', 'Peggy'),
+       ('Outside Collaborator', 'Sybil'),
+       ('Bot', 'Bot3'),
+       ('Collaborator', 'Trent'),
+       ('Contributor', 'Victor');

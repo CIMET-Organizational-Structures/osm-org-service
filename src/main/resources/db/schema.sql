@@ -1,12 +1,6 @@
--- create a table
-CREATE TABLE test
+CREATE TABLE contributor
 (
-    id       INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    name     TEXT    NOT NULL,
-    archived BOOLEAN NOT NULL DEFAULT FALSE
+    id   BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    type VARCHAR(255),
+    name VARCHAR(255)
 );
-
--- add test data
-INSERT INTO test (name, archived)
-VALUES ('test row 1', true),
-       ('test row 2', false);
