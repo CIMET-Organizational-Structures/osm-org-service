@@ -24,8 +24,8 @@ public class Contributor extends RepresentationModel<Contributor> {
 
     private String name;
 
-    @ManyToMany(mappedBy = "contributors", fetch = FetchType.EAGER)
-    @JsonBackReference
+    @ManyToMany(mappedBy = "contributors")
+    @JsonBackReference("repo-contributor")
     private List<Repo> repos;
 
 }

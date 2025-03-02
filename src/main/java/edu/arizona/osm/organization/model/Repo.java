@@ -20,11 +20,10 @@ public class Repo extends RepresentationModel<Repo> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany(fetch = FetchType.EAGER,
-            cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+    @ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
     @JoinTable(name = "repo_contributor", joinColumns = @JoinColumn(name = "repo_id"),
             inverseJoinColumns = @JoinColumn(name = "contributor_id"))
-    @JsonManagedReference
+    @JsonManagedReference("repo-contributor")
     private List<Contributor> contributors;
 
 }
